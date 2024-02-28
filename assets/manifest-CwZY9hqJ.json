@@ -1,7 +1,7 @@
 {
   "name": "Prueba",
   "short_name": "Prueba",
-  "start_url":"/",
+  "start_url":"/notification",
   "icons": [
       {
           "src": "/android-chrome-192x192.png",
