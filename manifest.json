@@ -8,12 +8,12 @@
     "gcm_sender_id": "799673773049",
     "icons": [
         {
-            "src": "/icon-192x192.png",
+            "src": "/notification/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/icon-512x512.png",
+            "src": "/notification/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
