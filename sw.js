@@ -9,21 +9,21 @@ self.addEventListener("push", (event) => {
             url: data.click_action
         },
         actions: [
-            { action: "aceptar", title: "Aceptar" },
-            { action: "rechazar", title: "Rechazar" },
+            { action: "home", title: "Домой" },
+            { action: "about", title: "О нас" },
         ],
     }));
 });
 
 self.addEventListener("notificationclick", (event) => {
     console.log('event2', event)
-    const link = event.notification.data.url || '/'
+    const link = event.notification.data.url
     if(!event?.data?.title) event.waitUntil(clients.openWindow(link));
-    if (event.data.title === "aceptar") {
+    if (event.data.title === "home") {
         return event.waitUntil(clients.openWindow(link));
     }
-    if (event.data.title === "rechazar") {
-        return  console.log("Botón rechazar pulsado");
+    if (event.data.title === "about") {
+        return event.waitUntil(clients.openWindow('/notification'));
     }
 
 });
