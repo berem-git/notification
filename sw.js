@@ -1,12 +1,13 @@
 self.addEventListener("push", (event) => {
     const notification = event.data.json().notification;
     const data = event.data.json();
+    console.log(data)
     event.waitUntil(self.registration.showNotification(notification.title , {
         body: notification.body,
         icon: '/icon.png',
         vibrate: true,
         data: {
-            url: data.click_action
+            url: data.data.click_action
         },
         actions: [
             { action: "home", title: "Домой" },
