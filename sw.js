@@ -17,9 +17,10 @@ self.addEventListener("push", (event) => {
 
 self.addEventListener("notificationclick", (event) => {
     console.log('event2', event)
-    if(!event?.data?.title) event.waitUntil(clients.openWindow(event.notification.data.url));
+    const link = event.notification.data.url || '/'
+    if(!event?.data?.title) event.waitUntil(clients.openWindow(link));
     if (event.data.title === "aceptar") {
-        return event.waitUntil(clients.openWindow(event.notification.data.url));
+        return event.waitUntil(clients.openWindow(link));
     }
     if (event.data.title === "rechazar") {
         return  console.log("Botón rechazar pulsado");

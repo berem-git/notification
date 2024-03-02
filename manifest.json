@@ -1,7 +1,7 @@
 {
     "name": "Prueba",
     "short_name": "Prueba",
-    "start_url":"/",
+    "start_url":"/notification",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone",
